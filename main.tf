@@ -239,7 +239,7 @@ resource "aws_instance" "bastion-host" {
     type        = "ssh"
     user        = "ec2-user"
     # private_key = file("C:/Users/Minfy/Downloads/my-key.pem")
-    private_key = file("${path.module}/my-key")
+    private_key = file("${path.module}/my-key.pem")
     host        = self.public_ip
   }
   provisioner "remote-exec" {
