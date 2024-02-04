@@ -260,7 +260,7 @@ resource "aws_instance" "bastion-host" {
 
   provisioner "file" {
     # source      = "${path.module}/../Users/Minfy/Downloads/my-key.pem"
-    source      = "C:/Users/Minfy/Downloads/my-key.pem"
+    source      = "${path.module}/my-key.pem"
     destination = "/home/ec2-user/my-key.pem"
   }
 
